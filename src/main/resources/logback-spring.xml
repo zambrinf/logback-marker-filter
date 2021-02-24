@@ -17,7 +17,7 @@
 
         <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
             <evaluator class="ch.qos.logback.classic.boolex.OnMarkerEvaluator">
-                <marker>read</marker>
+                <marker>orange</marker>
             </evaluator>
             <onMismatch>DENY</onMismatch>
             <onMatch>NEUTRAL</onMatch>

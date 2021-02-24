@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
-    private final Marker readMarker = MarkerFactory.getMarker("read");
-    private final Marker writeMarker = MarkerFactory.getMarker("write");
+    private final Marker orangeMarker = MarkerFactory.getMarker("orange");
+    private final Marker appleMarker = MarkerFactory.getMarker("apple");
 
     @GetMapping("/")
     public String getHelloWorld() {
-        log.info(readMarker, "Requested Hello World Read endpoint");
+        log.info(orangeMarker, "Requested Hello World with orange marker");
         return "Hello World!";
     }
 
     @GetMapping("/hi")
     public String getHi() {
-        log.info(writeMarker, "Requested Hi write endpoint");
+        log.info(appleMarker, "Requested Hi apple marker");
         return "Hi World!";
     }
 }
